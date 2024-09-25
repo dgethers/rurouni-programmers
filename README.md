@@ -57,7 +57,48 @@ process.
 
 ## Choosing the architecture
 
+Non-profit organization with a limited budget, the architecture must be cost effective and scalable.
+Simpliicity is key since the non-profit will not have huge staff of software engineers for DEVOPS, support, and development.
+Performance is important since the platform will be used by employers, job candidates, and administrators.
+Integration
+
+Domain-Based User Interface
+
+There are three distinct user types that will interact with the platform: Employers, Job Candidates, and Administrators.
+Each user type will have a unique set of features and functionality that they can access.
+
+<img src="images/domain-based-user-interface.png">
+
+### Storage
+
+Single Relational Database
+
+In order to reduce the coupling between the different services/components there will be logical partitions in the database.
+This will take the form of diifferent schemas in the database.
+
+Schemas:
+* Common
+* Employer
+* Job Candidate
+* Administrator
+
+Object Storage for Resumes
+
+The reason to store the resumes in object storage is the size of a typical resume will be between 100-300KB for .doc/.docx files, 
+200-500KB for pdf files, and if images are embedded 500K to 2-3MB.
+
+
+Since this architecture only has one quanta the number of services is limited. Anywhere between 4 to 12 sepearately deployed services.
+As services become more fine-grained, issues surrounding orchestration and choreography start to appear. Both orchestration and choreography 
+are required when multiple services must be coordinated to complete a certain business transaction.
+
+Architectural `quantum` is an independently deployable component with high functional cohesion
+
+### Compute
+
 ## Designing the architecture
+
+### Non-Functional Requirements
 
 ## Use Cases
 
