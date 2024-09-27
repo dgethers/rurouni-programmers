@@ -53,7 +53,7 @@ process.
 ## Architeture characteristics
 
 <img src="images/architecture-characteristics-worksheet.png">
-<img src="images/architecture-styles-worksheet.png">
+<img src="images/architecture-styles-worksheet-v2.png">
 
 ## Choosing the architecture
 
